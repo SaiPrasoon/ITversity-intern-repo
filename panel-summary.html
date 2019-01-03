@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+  
+  hr{
+       border-color: black;
+  }
+  </style>
+    <script>
+    var edit,save,discard,summary,oldText;
+
+    function funcEdit(tagid){
+        save=document.getElementById("Save");
+        discard=document.getElementById("Discard");       
+        save.style.color="blue";
+        save.style.backgroundColor="white";
+        save.style.borderColor="white";
+        save.disabled=false;
+
+        discard.style.color="red";
+        discard.style.backgroundColor="white";
+        discard.style.borderColor="white";
+        discard.disabled=false;
+
+        summary=document.getElementById(tagid);
+        oldText=summary.innerHTML;
+        summary.contentEditable=true;
+
+    }
+
+    function funcDiscard(){
+        summary.contentEditable=false;
+        summary.innerHTML=oldText;
+        rollBack();
+    }
+
+    function funcSave(){
+        summary.contentEditable=false;
+        var newText=summary.innerHTML;
+        summary.innerHTML=newText;
+        oldText=newText;
+        
+    }
+
+     function rollBack(){
+        save.style.color=transparent;
+        save.style.backgroundColor=transparent;
+        save.style.borderColor=transparent;
+        save.disabled=true;
+
+        discard.style.color=transparent;
+        discard.style.backgroundColor=transparent;
+        discard.style.borderColor=transparent;
+        discard.disabled=true;
+    }
+
+        
+    </script>
+</head>
+<body>
+ 
+<div class="container">
+  <h2>Sample summary Page</h2>
+  <div class="panel panel-default">
+    <div class="panel-heading" id="summary">
+            <h3>Summary
+            <button style="float:right" id="edit"><span class="glyphicon glyphicon-pencil" onclick="funcEdit('summary')"></span></button></h3> 
+            <p>Technology Adviser and Evangelist
+    
+            <br>https://youtube.com/itversityin
+            <br>http://www.itversity.com
+            <br>http://discuss.itversity.com - for support
+            <br>https://labs.itversity.com - low cost big data lab to learn technologies.
+            
+            <br>Building IT career for people and provide quality services to the clients will be paramount to our organization.
+            
+            <br>As an entry strategy itversity will be providing quality training in the areas of ABCD
+            <br>
+            <ul>
+            <li>Application Development</li>
+            <li>Big Data and Business Intelligence</li>
+            <li>Cloud</li>
+            <li>Datawarehousing, Databases</li>
+            </ul>
+            <br>If you are looking for certification oriented training in the areas of Big Data and Cloud, please send email to training@itversity.com
+            
+            </p>
+        
+            <button id="Discard" onclick="funcDiscard()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled >DISCARD</button> &ensp;
+            <button id="Save" onclick="funcSave()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled">SAVE</button>
+            <br>
+    </div>
+    <div class="panel-body">
+        <h1> Experience </h1>
+        <div class="col-sm-3"> Itversity</div>
+        <div class="col-sm-9">
+            <p>
+                    Our key focus areas
+                    <ul>
+
+                    <li>Engineering Services (using Full Stack, Big Data)</li>
+                    <li> Managed Services (Cloud, DevOps and Big Data cluster management)</li>
+                    <li> Services</li>
+                    <li>Staffing Services</li>
+                    </ul>
+                    Our Corporate Training Offerings:
+                    <ul>
+                    <li> A Comprehensive Kafka Workshop using either Scala or Java or Python</li>
+                    <li>Apache Spark 2 and Kafka Workshop using either Scala or Python</li>
+                    <li>Big Data on Cloud Workshop</li>
+                    <li>Big Data Administration hands-on workshop including Kerberos and Sentry</li>
+                    <li> We customize as per the client needs</li>
+                    </ul>
+                    Providing quality training and services in the areas of Big Data and Cloud.
+                    
+                    <br>https://labs.itversity.com - low cost big data lab to learn technologies.
+                    <br>http://discuss.itversity.com - support while learning
+                    <br>http://www.itversity.com - website for content
+                    <br>https://youtube.com/itversityin
+                    <br>https://github.com/dgadiraju
+                    <br>
+                    <ul>
+                    <li>Quality certification training for the corporate companies</li>
+                    <li>Provide staffing and staff augmentation services with training of large batches at nominal costs</li>
+                    <li> Mitigate inefficiency in the 3rd party staffing solutions using subject matter experts See less</li>
+                    </ul>
+                <hr>    
+            </p>
+        </div>
+        <div class="col-sm-3">Harman</div>
+        <div class="col-sm-9">
+                <ul>
+                        <li> A Comprehensive Kafka Workshop using either Scala or Java or Python</li>
+                        <li>Apache Spark 2 and Kafka Workshop using either Scala or Python</li>
+                        <li>Big Data on Cloud Workshop</li>
+                        <li>Big Data Administration hands-on workshop including Kerberos and Sentry</li>
+                        <li> We customize as per the client needs</li>
+                </ul>
+                <hr>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
