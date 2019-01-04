@@ -26,7 +26,7 @@ var edit,save,discard,summary,oldText;
     function funcDiscard(){
         summary.contentEditable=false;
         summary.innerHTML=oldText;
-        //rollBackButtons();
+        rollBackButtons();
     }
 
     function funcSave(){
@@ -37,7 +37,8 @@ var edit,save,discard,summary,oldText;
         
     }
 
-     /*function rollBackButtons(){
+     function rollBackButtons(){
+         
         save.style.color=transparent;
         save.style.backgroundColor=transparent;
         save.style.borderColor=transparent;
@@ -47,4 +48,4 @@ var edit,save,discard,summary,oldText;
         discard.style.backgroundColor=transparent;
         discard.style.borderColor=transparent;
         discard.disabled=true;
-    }*/
+    }

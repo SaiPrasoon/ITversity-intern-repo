@@ -8,22 +8,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <style>
-  
-  hr{
-       border-color: green
-  }
-  </style>
+  <style src="style.css">  </style>
     <script src="editFunctions.js"></script>
 </head>
-<body>
+<body style="background-color:grey">
  
 <div class="container">
-  <h2>Sample summary Page</h2>
-  <div class="panel panel-default">
-    <div class="panel-heading" id="summary">
+  <b><h2>&emsp;Sample summary Page</h2></b>
+    <div class="panel" id="summary" style="border-radius:2px">
         <button style="float:right" id="edit"><span class="glyphicon glyphicon-pencil" onclick="funcEdit('summary')"></span></button>
-            <h1>Summary</h1> 
+            <h1> &emsp;Summary</h1> 
             <p>Technology Adviser and Evangelist
     
             <br>https://youtube.com/itversityin
@@ -49,15 +43,28 @@
             <button id="Save_Summary" onclick="funcSave()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled">SAVE</button>
             <br>
     </div>
-    <div class="panel-body" id="experience">
+    <div class="panel" id="experience">
         <button style="float:right" id="edit"><span class="glyphicon glyphicon-pencil" onclick="funcEdit('experience')"></span></button>
-        <h1> Experience </h1>
-        <div class="col-sm-3"> Itversity</div>
-        <div class="col-sm-9">
+        <h2>&emsp; Experience </h2><br>
+        <div class="row">
+        <div class="col-sm-2"> 
+            <p style="color:grey">Itversity</p>
+            
+        </div>
+        <div class="col-sm-10">
+            <h3>Founder and Technology Evangelist</h3>
+            <h4>Itversity, INC</h4>
+            <h4>Nov 2015 - Present</h4>
+            <h4>Dallas/Fort Worth Area</h4>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+        <div class="col-sm-10">
             <p>
-                    Our key focus areas
+                    
                     <ul>
-
+                    Our key focus areas
                     <li>Engineering Services (using Full Stack, Big Data)</li>
                     <li> Managed Services (Cloud, DevOps and Big Data cluster management)</li>
                     <li> Services</li>
@@ -87,8 +94,18 @@
                 <hr>    
             </p>
         </div>
-        <div class="col-sm-3">Harman</div>
-        <div class="col-sm-9">
+        </div>
+        <div class="row">
+        <div class="col-sm-2">
+            <p style="color:grey">Harman</p>
+        </div>
+        <div class="col-sm-10">
+            
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+        <div class="col-sm-10">
                 <ul>
                         <li> A Comprehensive Kafka Workshop using either Scala or Java or Python</li>
                         <li>Apache Spark 2 and Kafka Workshop using either Scala or Python</li>
@@ -98,13 +115,13 @@
                 </ul>
                 <hr>
         </div>
-
+        </div>
         <button id="Discard_Exp" onclick="funcDiscard()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled >DISCARD</button> &ensp;
-            <button id="Save_Exp" onclick="funcSave()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled">SAVE</button>
+        <button id="Save_Exp" onclick="funcSave()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled">SAVE</button>
    
     </div>
   </div>
-</div>
+
 
 </body>
 </html>

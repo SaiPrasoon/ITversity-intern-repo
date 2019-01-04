@@ -1,0 +1,17 @@
+*{
+    font-family: sans-serif;
+}
+hr{
+    border-color: green
+}
+
+button{
+    float: right; 
+    color: transparent; 
+    background-color: transparent; 
+    border-color: transparent; 
+}
+
+h3{
+    font-size: 2px;
+}
