@@ -16,10 +16,14 @@
   </style>
     <script>
     var edit,save,discard,summary,oldText;
-
     function funcEdit(tagid){
-        save=document.getElementById("Save");
-        discard=document.getElementById("Discard");       
+        if(tagid=="summary"){
+            save=document.getElementById("Save_Summary");
+            discard=document.getElementById("Discard_Summary");       }
+        else{
+            save=document.getElementById("Save_Exp");
+            discard=document.getElementById("Discard_Exp");
+        }
         save.style.color="blue";
         save.style.backgroundColor="white";
         save.style.borderColor="white";
@@ -39,7 +43,7 @@
     function funcDiscard(){
         summary.contentEditable=false;
         summary.innerHTML=oldText;
-        rollBack();
+        //rollBackButtons();
     }
 
     function funcSave(){
@@ -50,7 +54,7 @@
         
     }
 
-     function rollBack(){
+     /*function rollBackButtons(){
         save.style.color=transparent;
         save.style.backgroundColor=transparent;
         save.style.borderColor=transparent;
@@ -60,7 +64,7 @@
         discard.style.backgroundColor=transparent;
         discard.style.borderColor=transparent;
         discard.disabled=true;
-    }
+    }*/
 
         
     </script>
@@ -71,8 +75,8 @@
   <h2>Sample summary Page</h2>
   <div class="panel panel-default">
     <div class="panel-heading" id="summary">
-            <h3>Summary
-            <button style="float:right" id="edit"><span class="glyphicon glyphicon-pencil" onclick="funcEdit('summary')"></span></button></h3> 
+        <button style="float:right" id="edit"><span class="glyphicon glyphicon-pencil" onclick="funcEdit('summary')"></span></button>
+            <h1>Summary</h1> 
             <p>Technology Adviser and Evangelist
     
             <br>https://youtube.com/itversityin
@@ -94,11 +98,12 @@
             
             </p>
         
-            <button id="Discard" onclick="funcDiscard()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled >DISCARD</button> &ensp;
-            <button id="Save" onclick="funcSave()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled">SAVE</button>
+            <button id="Discard_Summary" onclick="funcDiscard()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled >DISCARD</button> &ensp;
+            <button id="Save_Summary" onclick="funcSave()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled">SAVE</button>
             <br>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" id="experience">
+        <button style="float:right" id="edit"><span class="glyphicon glyphicon-pencil" onclick="funcEdit('experience')"></span></button>
         <h1> Experience </h1>
         <div class="col-sm-3"> Itversity</div>
         <div class="col-sm-9">
@@ -147,6 +152,9 @@
                 <hr>
         </div>
 
+        <button id="Discard_Exp" onclick="funcDiscard()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled >DISCARD</button> &ensp;
+            <button id="Save_Exp" onclick="funcSave()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled">SAVE</button>
+   
     </div>
   </div>
 </div>
