@@ -4,14 +4,45 @@
 hr{
     border-color: green
 }
-
-button{
-    float: right; 
-    color: transparent; 
-    background-color: transparent; 
-    border-color: transparent; 
+h2{
+    color: rgb(80, 80, 158);
+}
+h3 { 
+    font-size: 20px;
+    font-weight: bold; 
 }
 
-h3{
-    font-size: 2px;
+h4{
+    font-size: 15px;
+    color: gray;
+}
+p{
+    font-size: 12px;
+}
+
+li{
+    font-size: 12px;
+}
+button.dissolve{
+    float: right;
+     color: transparent; 
+     background-color: transparent; 
+     border-color: transparent;
+}
+div{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    
+}
+
+img{
+    border: 1px;
+    border-radius: 50%;
+    border-color:grey;
+    border-style: solid;
+    height: 150px;
+    width: 150x;
 }

@@ -8,18 +8,22 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <style src="style.css">  </style>
-    <script src="editFunctions.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="editFunctions.js"></script>
 </head>
 <body style="background-color:grey">
  
 <div class="container">
-  <b><h2>&emsp;Sample summary Page</h2></b>
+  
     <div class="panel" id="summary" style="border-radius:2px">
         <button style="float:right" id="edit"><span class="glyphicon glyphicon-pencil" onclick="funcEdit('summary')"></span></button>
-            <h1> &emsp;Summary</h1> 
-            <p>Technology Adviser and Evangelist
-    
+            <h1>Summary</h1> 
+            <table>
+            <tr>
+            <td width=30%><img src="images/ceo.jpg" ></td>
+            <td rowspan="2"><h2> Durga Gudiraju</h2>
+            <h3>Technology Adviser and Evangelist</h3>
+            <p>
             <br>https://youtube.com/itversityin
             <br>http://www.itversity.com
             <br>http://discuss.itversity.com - for support
@@ -28,49 +32,47 @@
             <br>Building IT career for people and provide quality services to the clients will be paramount to our organization.
             
             <br>As an entry strategy itversity will be providing quality training in the areas of ABCD
-            <br>
+            <br></p>
             <ul>
             <li>Application Development</li>
             <li>Big Data and Business Intelligence</li>
             <li>Cloud</li>
             <li>Datawarehousing, Databases</li>
             </ul>
-            <br>If you are looking for certification oriented training in the areas of Big Data and Cloud, please send email to training@itversity.com
+            <br>
+            <P>If you are looking for certification oriented training in the areas of Big Data and Cloud, please send email to training@itversity.com
             
             </p>
         
-            <button id="Discard_Summary" onclick="funcDiscard()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled >DISCARD</button> &ensp;
-            <button id="Save_Summary" onclick="funcSave()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled">SAVE</button>
-            <br>
+            <button class="dissolve" id="Discard_Summary" onclick="funcDiscard()"  disabled >DISCARD</button> &ensp;
+            <button class="dissolve" id="Save_Summary" onclick="funcSave()" disabled>SAVE</button>
+            <br></td>
+        </tr>   
+       
+        </table>
     </div>
     <div class="panel" id="experience">
         <button style="float:right" id="edit"><span class="glyphicon glyphicon-pencil" onclick="funcEdit('experience')"></span></button>
         <h2>&emsp; Experience </h2><br>
-        <div class="row">
-        <div class="col-sm-2"> 
-            <p style="color:grey">Itversity</p>
-            
+        
+        <div class="col-sm-3"> 
+            <img src="images/itversity.jpg" >
         </div>
-        <div class="col-sm-10">
-            <h3>Founder and Technology Evangelist</h3>
-            <h4>Itversity, INC</h4>
-            <h4>Nov 2015 - Present</h4>
-            <h4>Dallas/Fort Worth Area</h4>
-        </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-2"></div>
-        <div class="col-sm-10">
-            <p>
-                    
+       
+        <div class="col-sm-9">
+           
+                    <h3>Founder and Technology Evangelist</h3>
+                    <h4>Itversity, INC</h4>
+                    <h4>Nov 2015 - Present. 3 yrs 3 mos</h4>
+                    <h4>Dallas/Fort Worth Area</h4> 
+                    <p>Our key focus areas</p>
                     <ul>
-                    Our key focus areas
                     <li>Engineering Services (using Full Stack, Big Data)</li>
                     <li> Managed Services (Cloud, DevOps and Big Data cluster management)</li>
                     <li> Services</li>
                     <li>Staffing Services</li>
                     </ul>
-                    Our Corporate Training Offerings:
+                    <p>Our Corporate Training Offerings:</p>
                     <ul>
                     <li> A Comprehensive Kafka Workshop using either Scala or Java or Python</li>
                     <li>Apache Spark 2 and Kafka Workshop using either Scala or Python</li>
@@ -78,14 +80,14 @@
                     <li>Big Data Administration hands-on workshop including Kerberos and Sentry</li>
                     <li> We customize as per the client needs</li>
                     </ul>
-                    Providing quality training and services in the areas of Big Data and Cloud.
+                    <p>Providing quality training and services in the areas of Big Data and Cloud.
                     
                     <br>https://labs.itversity.com - low cost big data lab to learn technologies.
                     <br>http://discuss.itversity.com - support while learning
                     <br>http://www.itversity.com - website for content
                     <br>https://youtube.com/itversityin
                     <br>https://github.com/dgadiraju
-                    <br>
+                    <br></p>
                     <ul>
                     <li>Quality certification training for the corporate companies</li>
                     <li>Provide staffing and staff augmentation services with training of large batches at nominal costs</li>
@@ -94,18 +96,16 @@
                 <hr>    
             </p>
         </div>
+       
+        
+        <div class="col-sm-3">
+                <img src="images/harman.jpg" >
         </div>
-        <div class="row">
-        <div class="col-sm-2">
-            <p style="color:grey">Harman</p>
-        </div>
-        <div class="col-sm-10">
-            
-        </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-2"></div>
-        <div class="col-sm-10">
+        <div class="col-sm-9">
+                <h3>Enterprise Architect</h3>
+                <h4>Symphony Teleca</h4>
+                <h4>Jul 2015 - Oct 2015. 4 mos</h4>
+                <h4>Dallas/Fort Worth Area</h4>
                 <ul>
                         <li> A Comprehensive Kafka Workshop using either Scala or Java or Python</li>
                         <li>Apache Spark 2 and Kafka Workshop using either Scala or Python</li>
@@ -115,9 +115,8 @@
                 </ul>
                 <hr>
         </div>
-        </div>
-        <button id="Discard_Exp" onclick="funcDiscard()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled >DISCARD</button> &ensp;
-        <button id="Save_Exp" onclick="funcSave()" style="float: right; color: transparent; background-color: transparent; border-color: transparent;" disabled">SAVE</button>
+        <button class="dissolve" id="Discard_Exp" onclick="funcDiscard()"  disabled >DISCARD</button> &ensp;
+        <button class="dissolve" id="Save_Exp" onclick="funcSave()" disabled>SAVE</button>
    
     </div>
   </div>
