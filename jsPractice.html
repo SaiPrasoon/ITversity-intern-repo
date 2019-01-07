@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/babel">
+
+        var jsonPerson={name: "Prasoon",age:21,gender:"Male"};
+        var options={
+            method:'post',
+            headers:{
+                "content-type":"application/json"
+            },
+            body: JSON.stringify(jsonPerson)
+        }
+        fetch("http://koushikmln.com:7500/post",options)
+        .then(response=>{
+            var jsonPerson={name: "Prasoona",age:21,gender:"Male"};
+            var options={
+            method:'post',
+            headers:{
+                "content-type":"application/json"
+            },
+            body: JSON.stringify(jsonPerson)
+            }
+            return  fetch("http://koushikmln.com:7500/post",options)
+            })
+        .then( response2 => response2.json())
+        .then(data => console.log(data))
+        .catch(function(err){
+            console.log('Error:'+err);
+        });
+            
+        class Demo{
+            name = 'Dylan'
+            printMyName(){
+                console.log(this.name)
+            }
+        }
+        
+        const p = new Demo()
+        p.printMyName()        
+        </script>
+    </head>
+    <body></body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Babel Example</title>
+</head>
+<body>
+    <div id="output"></div>
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+   <!-- <script type="text/babel">
+        const arr = {name:"Prasoon",age:21}
+        const arr1 = {...arr} //destructuring
+        arr1.gender="Male";
+        console.log("Array new:",arr1);
+        console.log("Array old:",arr);   
+        
+        const person1={}
+        const addDetails =person1=>{
+            person1.name="prasoon";
+            person1.age=21;
+            return person1;
+        }
+
+        
+        const person=addDetails(person1);
+        console.log(person);
+
+        
+    </script> -->
+
+    <script type="text/babel">
+        const employee=[
+            {name:"Prasoon", salary: 10000, inc : 10},
+            {name:"Manogna", salary: 20000, inc : 15},
+            {name:"Bilhani", salary: 30000, inc : 20}
+        ]
+
+        const incrementCalculator=(employee)=>{
+            const increment = employee.salary*employee.inc/100
+            employee.newSalary = employee.salary+increment
+
+            return employee
+        }
+
+
+        const newEmployeeArray = employee.map( employeer => incrementCalculator(employeer))
+        console.log(newEmployeeArray)
+        class Demo{
+            name = 'Dylan'
+            printMyName(){
+                console.log(this.name)
+            }
+        }
+        
+        const p = new Demo()
+        p.printMyName()        
+
+    </script>
+</body>
+</html>
